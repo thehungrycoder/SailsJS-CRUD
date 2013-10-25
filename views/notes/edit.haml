@@ -1,0 +1,13 @@
+.page-header
+  %h1 Edit Note
+
+.row-fluid
+  %form{action: '/notes/' + id + '/update', method: 'post'}
+    %label Title
+    %input{type: 'text', name: 'title', value: title}
+    %br 
+    %label Content
+    %textarea{name: 'content'}= content
+    %br
+    %button{type: 'submit'} Save
+
